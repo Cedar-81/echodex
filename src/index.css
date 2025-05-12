@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #F5B655;
+  --color-light_gray: #111111;
+  --color-black: #08070C;
+}
+
+/* Regular */
+@font-face {
+  font-family: "BaseNeue";
+  src: url("/fonts/BaseNeueTrial-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Medium */
+@font-face {
+  font-family: "BaseNeue";
+  src: url("/fonts/BaseNeueTrial-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Semibold */
+@font-face {
+  font-family: "BaseNeue";
+  src: url("/fonts/BaseNeueTrial-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* Wide Regular */
+@font-face {
+  font-family: "BaseNeueWide";
+  src: url("/fonts/BaseNeueTrial-Wide.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Wide Medium */
+@font-face {
+  font-family: "BaseNeueWide";
+  src: url("/fonts/BaseNeueTrial-WideMedium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Wide Semibold */
+@font-face {
+  font-family: "BaseNeueWide";
+  src: url("/fonts/BaseNeueTrial-WideSemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* Wide Light */
+@font-face {
+  font-family: "BaseNeueWide";
+  src: url("/fonts/BaseNeueTrial-WideLight.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* Exp Light */
+@font-face {
+  font-family: "BaseNeueExp";
+  src: url("/fonts/BaseNeueTrial-Expanded.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+body {
+  font-family: "BaseNeueWide", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.baseneue_exp {
+  font-family: "BaseNeueExp", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.baseneue_rg {
+  font-family: "BaseNeue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
