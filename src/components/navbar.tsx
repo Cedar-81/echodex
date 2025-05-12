@@ -7,7 +7,7 @@ function Navbar() {
   const wallet = useSelector((state: RootState) => state.wallet);
   console.log("signer: ", wallet.signer);
   return (
-    <nav className="flex absolute z-40 text-white items-center w-max h-[4rem] px-6 rounded-full top-10 gap-16 bg-[#F5B655]/14 -translate-x-[50%] left-[50%]">
+    <nav className="hidden lg:flex absolute z-40 text-white items-center w-max h-[4rem] px-6 rounded-full top-10 gap-16 bg-[#F5B655]/14 -translate-x-[50%] left-[50%]">
       <ul className="flex items-center gap-8">
         <svg
           width="39"

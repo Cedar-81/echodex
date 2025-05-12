@@ -13,22 +13,22 @@ function Presale() {
   console.log("signer: ", wallet.signer);
 
   return (
-    <section className="flex justify-between px-[6rem]">
-      <div className="w-1/2 space-y-10">
+    <section className="flex flex-col-reverse gap-10 lg:gap-0 lg:flex-row justify-between lg:px-[6rem] px-8">
+      <div className="lg:w-1/2 space-y-10">
         <div className="flex justify-between items-center">
           <div>
             <h3 className="text-2xl font-medium">ECHODEX</h3>
-            <div className="flex gap-2">
-              <button className="px-2 flex items-center py-1 text-sm rounded-md text-white border border-white">
+            <div className="flex gap-2 ">
+              <button className="px-2 flex items-center py-1 text-xs lg:text-sm rounded-md text-white border border-white">
                 Audited
               </button>
-              <button className="px-2 flex items-center py-1 text-sm rounded-md bg-brand text-black">
+              <button className="px-2 flex items-center py-1 text-xs lg:text-sm rounded-md bg-brand text-black">
                 Verified
               </button>
             </div>
           </div>
 
-          <div className="">
+          <div className="text-xs lg:text-base">
             <h4 className="font-medium">EDEX/BNB</h4>
             <p>view on BSCSCAN</p>
           </div>
@@ -39,7 +39,7 @@ function Presale() {
             type="number"
             value={amount}
             onChange={(e) => setAmount(Number(e.target.value))}
-            className="bg-transparent ring-0 w-full active:appearance-none border-0 outline-none py-6 px-4"
+            className="bg-transparent ring-0 w-full active:appearance-none border-0 outline-none py-4 lg:py-6 px-4"
             placeholder="Exchange quantity"
           />
           <button
@@ -50,14 +50,14 @@ function Presale() {
           </button>
         </div>
 
-        <div className="flex items-center justify-between">
+        <div className="flex items-center text-xs lg:text-base justify-between">
           <p>1 BNB = 1000 EDEX</p>
-          <p className="text-sm">Hard Cap: 4000 BNB</p>
+          <p className="text-xs lg:text-sm">Hard Cap: 4000 BNB</p>
           <p>Balance: 200BNB</p>
         </div>
       </div>
 
-      <div className="w-1/2">
+      <div className="lg:w-1/2">
         <h3 className="text-7xl text-right leading-tight">
           Join the <br />
           presale <br />
