@@ -5,11 +5,13 @@ import type { Signer } from "ethers";
 interface CounterState {
   signer: Signer | null;
   address: string | null;
+  balance: string | null;
 }
 
 const initialState: CounterState = {
   signer: null,
   address: null,
+  balance: null,
 };
 
 export const walletSlice = createSlice({
@@ -22,8 +24,11 @@ export const walletSlice = createSlice({
     setAddress: (state, action: PayloadAction<string>) => {
       state.address = action.payload;
     },
+    setBnbBal: (state, action: PayloadAction<string>) => {
+      state.balance = action.payload;
+    },
   },
 });
 
-export const { setAddress, setSigner } = walletSlice.actions;
+export const { setAddress, setSigner, setBnbBal } = walletSlice.actions;
 export default walletSlice.reducer;

@@ -53,7 +53,7 @@ function Presale() {
         <div className="flex items-center text-xs lg:text-base justify-between">
           <p>1 BNB = 1000 EDEX</p>
           <p className="text-xs lg:text-sm">Hard Cap: 4000 BNB</p>
-          <p>Balance: 200BNB</p>
+          <p>Balance: {wallet.balance ? wallet.balance : "0"}BNB</p>
         </div>
       </div>
 
