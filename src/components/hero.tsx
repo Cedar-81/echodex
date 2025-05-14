@@ -6,7 +6,7 @@ function Hero() {
         alt="background pattern"
         className="object-cover h-full w-full absolute top-0 right-0"
       />
-      <div className="absolute -translate-y-[50%] px-8 lg:px-0 top-[50%] w-full space-y-8 -translate-x-[50%] left-[50%] text-white">
+      <div className="absolute -translate-y-[50%] pt-[8rem] px-8 lg:px-0 top-[50%] w-full space-y-8 -translate-x-[50%] left-[50%] text-white">
         <h1 className="text-5xl lg:text-7xl baseneue_exp lg:text-center w-full leading-tight">
           Echodex — Play. <br className="hidden lg:block" />
           Trade. Earn. <br className="hidden lg:block" />

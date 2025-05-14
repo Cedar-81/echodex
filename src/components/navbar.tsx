@@ -1,14 +1,16 @@
 import { useSelector } from "react-redux";
 import type { RootState } from "../store";
 import { useWallet } from "../utils/useWallet";
+import { useState } from "react";
 
 function Navbar() {
   const { connect } = useWallet();
+  const [showNav, setShowNav] = useState(false);
   const wallet = useSelector((state: RootState) => state.wallet);
   console.log("signer: ", wallet.signer);
   return (
-    <nav className="hidden lg:flex absolute z-40 text-white items-center w-max h-[4rem] px-6 rounded-full top-10 gap-16 bg-[#F5B655]/14 -translate-x-[50%] left-[50%]">
-      <ul className="flex items-center gap-8">
+    <nav className="flex fixed z-40 text-white items-center w-full lg:w-max h-[4rem] px-6 lg:rounded-full top-0 lg:top-10 gap-16 bg-black lg:bg-[#F5B655]/14 -translate-x-[50%] left-[50%]">
+      <div className="flex w-full h-full justify-between items-center lg:mb-0">
         <svg
           width="39"
           height="41"
@@ -47,19 +49,88 @@ function Navbar() {
             stroke="white"
           />
         </svg>
+        {showNav ? (
+          <button className="lg:hidden" onClick={() => setShowNav(false)}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="2"
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        ) : (
+          <button onClick={() => setShowNav(true)} className="lg:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="2"
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        )}
+      </div>
+      {showNav && (
+        <div className="lg:hidden h-[calc(100vh-4rem)] bg-black w-[100vw] right-0 fixed top-[4rem] pt-4 px-8">
+          <ul className="flex flex-col lg:flex-row lg:items-center gap-8">
+            <li className="cursor-pointer">About</li>
+            <li className="cursor-pointer">Token</li>
+            <li className="cursor-pointer">Team</li>
+            <li className="cursor-pointer">Roadmap</li>
+          </ul>
+
+          <ul className="flex mt-8 lg:mt-0 flex-col lg:flex-row lg:items-center gap-6">
+            <li className="cursor-pointer">Contact</li>
+            <li className="cursor-pointer">
+              {!wallet.address ? (
+                <button
+                  onClick={connect}
+                  className="py-2 cursor-pointer px-8 text-white bg-brand/55 border-2 font-medium border-white rounded-full"
+                >
+                  Connect Wallet
+                </button>
+              ) : (
+                <button
+                  onClick={connect}
+                  className="py-2 cursor-pointer px-8 text-white bg-brand/55 border-2 font-medium border-white rounded-full"
+                >
+                  {wallet.address.slice(0, 6)}...{wallet.address.slice(-4)}
+                </button>
+              )}
+            </li>
+          </ul>
+        </div>
+      )}
+
+      <ul className=" hidden lg:flex lg:items-center gap-8">
         <li className="cursor-pointer">About</li>
         <li className="cursor-pointer">Token</li>
         <li className="cursor-pointer">Team</li>
         <li className="cursor-pointer">Roadmap</li>
       </ul>
 
-      <ul className="flex items-center gap-6">
+      <ul className="hidden mt-8 lg:mt-0 lg:flex lg:items-center gap-6">
         <li className="cursor-pointer">Contact</li>
         <li className="cursor-pointer">
           {!wallet.address ? (
             <button
               onClick={connect}
-              className="py-2 cursor-pointer px-8 text-white bg-brand/55 border-2 font-medium border-white rounded-full"
+              className="py-2 cursor-pointer px-8 text-nowrap text-white bg-brand/55 border-2 font-medium border-white rounded-full"
             >
               Connect Wallet
             </button>
