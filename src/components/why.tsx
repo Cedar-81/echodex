@@ -1,5 +1,3 @@
-import React from "react";
-
 function Why() {
   return (
     <section className="px-8 space-y-10 lg:px-[6rem] lg:text-center">
