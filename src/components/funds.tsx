@@ -12,27 +12,27 @@ function Funds() {
       </h3>
       <div className="relative z-30">
         <div className="flex gap-4 items-center">
-          <div className="min-w-[60%] h-10 lg:h-20 bg-[#F08F35]" />{" "}
+          <div className="min-w-[60%] h-10 lg:h-20 bg-[#C73265]" />{" "}
           <p className="text-xs lg:text-sm">Engineering & Development- 40%</p>
         </div>
         <div className="flex gap-4 items-center">
-          <div className="min-w-[60%] h-10 lg:h-20 bg-[#BA7029]" />{" "}
+          <div className="min-w-[30%] h-10 lg:h-20 bg-[#59126A]" />{" "}
           <p className="text-xs lg:text-sm">Marketing & Promotion - 20%</p>
         </div>
         <div className="flex gap-4 items-center">
-          <div className="min-w-[60%] h-10 lg:h-20 bg-[#7F8E70]" />{" "}
+          <div className="min-w-[18%] h-10 lg:h-20 bg-[#951F6C]" />{" "}
           <p className="text-xs lg:text-sm">Business Development- 12%</p>
         </div>
         <div className="flex gap-4 items-center">
-          <div className="min-w-[60%] h-10 lg:h-20 bg-[#2D1C04]" />{" "}
+          <div className="min-w-[15%] h-10 lg:h-20 bg-[#00055E]" />{" "}
           <p className="text-xs lg:text-sm">Legal & Regulation- 10%</p>
         </div>
         <div className="flex gap-4 items-center">
-          <div className="min-w-[24%] h-10 lg:h-20 bg-[#493F25]" />{" "}
+          <div className="min-w-[12%] h-10 lg:h-20 bg-[#212A84]" />{" "}
           <p className="text-xs lg:text-sm">Operation and Administration- 8%</p>
         </div>
         <div className="flex gap-4 items-center">
-          <div className="min-w-[15%] h-10 lg:h-20 bg-[#493F25]" />{" "}
+          <div className="min-w-[9%] h-10 lg:h-20 bg-[#ED635E]" />{" "}
           <p className="text-xs lg:te3xt-sm">Partners- 6%</p>
         </div>
       </div>
