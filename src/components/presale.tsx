@@ -58,9 +58,9 @@ function Presale() {
       </div>
 
       <div className="lg:w-1/2">
-        <h3 className="text-7xl text-right leading-tight">
-          Join the <br />
-          presale <br />
+        <h3 className="text-4xl lg:text-7xl text-right leading-tight">
+          Join the <br className="hidden lg:block" />
+          presale <br className="hidden lg:block" />
           launch
         </h3>
       </div>

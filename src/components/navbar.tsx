@@ -9,7 +9,7 @@ function Navbar() {
   const wallet = useSelector((state: RootState) => state.wallet);
   console.log("signer: ", wallet.signer);
   return (
-    <nav className="flex fixed z-40 text-white items-center w-full lg:w-max h-[4rem] px-6 lg:rounded-full top-0 lg:top-10 gap-16 bg-black lg:bg-[#F5B655]/14 -translate-x-[50%] left-[50%]">
+    <nav className="flex fixed z-40 text-white items-center w-full lg:w-max h-[4rem] px-6 lg:rounded-full top-0 lg:top-10 gap-16 bg-black border border-brand -translate-x-[50%] left-[50%]">
       <div className="flex w-full h-full justify-between items-center lg:mb-0">
         <svg
           width="39"

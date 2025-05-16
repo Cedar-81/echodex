@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+:root {
+  background-color: black;
+}
+
 @theme {
   --color-brand: #F5B655;
   --color-light_gray: #111111;
@@ -89,3 +93,24 @@ body {
   font-style: normal;
 }
 
+
+
+.title {
+  font-size: calc(100vw / 1728 * 100);
+}
+
+.sub-title {
+  font-size: calc(100vw / 1728 * 96);
+}
+
+.base {
+  font-size: calc(100vw / 1728 * 36);
+}
+
+.sm {
+  font-size: calc(100vw / 1728 * 20);
+}
+
+.xs {
+  font-size: calc(100vw / 1728 * 12);
+}
