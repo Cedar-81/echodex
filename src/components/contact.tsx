@@ -1,8 +1,8 @@
 function Contact() {
   return (
-    <section className="gap-10 flex flex-col lg:flex px-8 space-y-10 lg:px-[6rem] justify-between">
-      <div className="">
-        <h2 className="text-4xl lg:text-7xl lg:text-left text-center mx-auto leading-tight">
+    <section className="gap-10 flex flex-col lg:flex-row px-8 space-y-10 lg:px-[6rem] justify-between">
+      <div className="space-y-3">
+        <h2 className="text-4xl lg:text-7xl text-left mx-auto leading-tight">
           Contact us
         </h2>
 
