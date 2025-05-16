@@ -10,10 +10,13 @@ function Presale() {
   const { buyEdex } = useTokenSale(wallet.signer, SALE_CONTRACT_ADDRESS);
   const [amount, setAmount] = useState(0);
 
-  console.log("signer: ", wallet.signer);
+  // console.log("signer: ", wallet.signer);
 
   return (
-    <section className="flex flex-col-reverse gap-10 lg:gap-0 lg:flex-row justify-between lg:px-[6rem] px-8">
+    <section
+      id="presale"
+      className="flex flex-col-reverse gap-10 lg:gap-0 lg:flex-row justify-between lg:px-[6rem] px-8"
+    >
       <div className="lg:w-1/2 space-y-10">
         <div className="flex justify-between items-center">
           <div>
@@ -58,7 +61,7 @@ function Presale() {
       </div>
 
       <div className="lg:w-1/2">
-        <h3 className="text-4xl lg:text-7xl text-right leading-tight">
+        <h3 className="text-5xl lg:text-7xl text-right leading-tight">
           Join the <br className="hidden lg:block" />
           presale <br className="hidden lg:block" />
           launch

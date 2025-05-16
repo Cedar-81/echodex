@@ -17,10 +17,23 @@ function Hero() {
           you for every move — from staking to gameplay.
         </h2>
         <div className="flex flex-col lg:flex-row gap-6 w-full justify-center">
-          <button className="border py-4 px-10 cursor-pointer rounded-md border-brand text-brand">
-            White paper
-          </button>
-          <button className="border py-4 px-10 cursor-pointer rounded-md bg-brand text-black font-medium">
+          <a
+            href="https://echodex.network/whitepaper.pdf"
+            className=""
+            target="_blank"
+          >
+            <button className="border py-4 px-10 w-full lg:w-max cursor-pointer rounded-md border-brand text-brand">
+              White paper
+            </button>
+          </a>
+          <button
+            onClick={() =>
+              document
+                .getElementById("presale")
+                ?.scrollIntoView({ behavior: "smooth" })
+            }
+            className="border py-4 px-10 cursor-pointer rounded-md bg-brand text-black font-medium"
+          >
             Buy now
           </button>
         </div>

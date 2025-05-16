@@ -16,6 +16,7 @@ import TokenomicsTable from "./components/tokenomics_table";
 import Reward from "./components/reward";
 import Team from "./components/team";
 import Contact from "./components/contact";
+import Footer from "./components/footer";
 
 function App() {
   const { connect } = useWallet();
@@ -40,6 +41,7 @@ function App() {
       <Reward />
       <Team />
       <Contact />
+      <Footer />
     </main>
   );
 }

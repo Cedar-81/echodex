@@ -7,7 +7,7 @@ function Team() {
 
       <div className="flex flex-col lg:flex-row gap-8">
         <div className="space-y-2 lg:w-1/2">
-          <div className="h-[10rem] lg:h-[25rem] w-full relative border overflow-clip">
+          <div className="h-[10rem] lg:h-[25rem] w-full relative overflow-clip">
             <img
               src="./team1.png"
               className="absolute object-cover h-full"
@@ -21,7 +21,7 @@ function Team() {
           </p>
         </div>
         <div className="space-y-2 lg:w-1/2">
-          <div className="h-[10rem] lg:h-[25rem] w-full relative border overflow-clip">
+          <div className="h-[10rem] lg:h-[25rem] w-full relative overflow-clip">
             <img
               src="./team2.png"
               className="absolute h-full object-cover"
