@@ -16,13 +16,6 @@ import Footer from "./components/footer";
 import Promo from "./components/promo";
 
 function App() {
-  // const { connect } = useWallet();
-  // const wallet = useSelector((state: RootState) => state.wallet);
-  // useEffect(() => {
-  //   if (!wallet.address) {
-  //     connect();
-  //   }
-  // }, []);
   return (
     <main className="bg-black text-white space-y-[5rem] lg:space-y-[15rem]">
       <Navbar />
