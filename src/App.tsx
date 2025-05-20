@@ -13,6 +13,7 @@ import Reward from "./components/reward";
 import Team from "./components/team";
 import Contact from "./components/contact";
 import Footer from "./components/footer";
+import Promo from "./components/promo";
 
 function App() {
   // const { connect } = useWallet();
@@ -23,13 +24,14 @@ function App() {
   //   }
   // }, []);
   return (
-    <main className="bg-black text-white space-y-[5rem]">
+    <main className="bg-black text-white space-y-[5rem] lg:space-y-[15rem]">
       <Navbar />
       <Hero />
       <Presale />
       <About />
       <Why />
       <Community />
+      <Promo />
       <Tokenomics />
       <Roadmap />
       <Funds />

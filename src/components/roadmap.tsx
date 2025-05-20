@@ -1,12 +1,12 @@
 function Roadmap() {
   return (
-    <section className="px-8 space-y-10 lg:px-[6rem]">
+    <section className="px-8 space-y-10 lg:space-y-20 lg:px-[6rem]">
       <h2 className="text-4xl lg:text-7xl text-center leading-tight">
         Roadmap
       </h2>
 
       <div className="">
-        <div className="space-y-10">
+        <div className="space-y-10 lg:space-y-20 ">
           <div className="flex gap-30">
             <div className="space-y-2 lg:w-1/2">
               <h3 className="text-sm lg:text-lg font-medium">
@@ -23,7 +23,7 @@ function Roadmap() {
               </p>
             </div>
 
-            <div className="border hidden w-1/2 lg:flex justify-center">
+            <div className=" hidden w-1/2 lg:flex justify-center">
               <svg
                 width="368"
                 height="336"

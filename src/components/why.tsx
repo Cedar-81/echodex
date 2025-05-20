@@ -1,11 +1,11 @@
 function Why() {
   return (
-    <section className="px-8 space-y-10 lg:px-[6rem] lg:text-center">
-      <div className="space-y-2">
+    <section className="px-8 space-y-10 lg:space-y-20 lg:px-[6rem] lg:text-center">
+      <div className="space-y-2 lg:space-y-3">
         <h3 className="text-4xl lg:text-7xl text-right lg:text-center leading-tight">
           Why choose us?
         </h3>
-        <p className="items-center text-xs">
+        <p className="items-center text-xs lg:text-base lg:w-[70%] mx-auto ">
           Echodex isn’t just another DeFi platform — it’s a next-gen ecosystem
           where gaming, trading, and community governance come together.{" "}
         </p>

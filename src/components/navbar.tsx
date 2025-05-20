@@ -150,7 +150,7 @@ function Navbar() {
       </ul>
 
       <ul className="hidden mt-8 lg:mt-0 lg:flex lg:items-center gap-6">
-        <li className="cursor-pointer">
+        <li className="cursor-pointer w-max">
           {/* {!wallet.address ? (
             <button
               onClick={connect}

@@ -93,7 +93,10 @@ body {
   font-style: normal;
 }
 
-
+.twitter-tweet-rendered {
+  max-width: 100% !important;
+  width: 100% !important;
+}
 
 .title {
   font-size: calc(100vw / 1728 * 100);

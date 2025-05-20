@@ -1,6 +1,6 @@
 function Team() {
   return (
-    <section className="gap-10 flex px-8 space-y-10 justify-between lg:px-[6rem]">
+    <section className="gap-10 flex px-8 space-y-10 lg:space-y-20  justify-between lg:px-[6rem]">
       <h2 className="text-4xl lg:text-7xl text-left mx-auto leading-tight">
         Meet the team
       </h2>

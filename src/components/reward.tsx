@@ -1,6 +1,6 @@
 function Reward() {
   return (
-    <section className="space-y-10 px-10 lg:px-[6rem]">
+    <section className="space-y-10 lg:space-y-20  px-10 lg:px-[6rem]">
       <div className="flex flex-col lg:flex-row items-center gap-4">
         <h2 className=" text-4xl lg:text-7xl text-center lg:text-left mx-auto leading-tight">
           Built to Reward, Designed to Last

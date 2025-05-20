@@ -1,6 +1,6 @@
 function TokenomicsTable() {
   return (
-    <section className="space-y-10 px-8 lg:px-[6rem]">
+    <section className="space-y-10 lg:space-y-20  px-8 lg:px-[6rem]">
       <h3 className="text-4xl lg:text-7xl text-center mx-auto leading-tight">
         Tokenomics
       </h3>

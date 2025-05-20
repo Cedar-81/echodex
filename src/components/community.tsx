@@ -1,6 +1,6 @@
 function Community() {
   return (
-    <section className="px-8 lg:px-[6rem] space-y-10">
+    <section className="px-8 lg:px-[6rem] space-y-10 lg:space-y-20 ">
       <h3 className="text-4xl lg:text-7xl leading-tight">
         Join the <span className="text-brand">Echodex Community</span> today and
         experience the future of gamefi and defi!{" "}

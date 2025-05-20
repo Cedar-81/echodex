@@ -1,6 +1,6 @@
 function Tokenomics() {
   return (
-    <section className="px-8 lg:px-[6rem] h-max relative space-y-10 overflow-clip">
+    <section className="px-8 lg:px-[6rem] h-max relative space-y-10 lg:space-y-20  overflow-clip">
       <img
         src="./pattern1.png"
         className="absolute right-0 h-full opacity-40"

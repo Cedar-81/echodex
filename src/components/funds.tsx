@@ -1,6 +1,6 @@
 function Funds() {
   return (
-    <section className="px-8 h-max relative space-y-10 lg:px-[6rem] overflow-clip">
+    <section className="px-8 h-max relative space-y-10 lg:space-y-20  lg:px-[6rem] overflow-clip">
       <img
         src="./pattern2.png"
         className="absolute right-0 h-full opacity-40"

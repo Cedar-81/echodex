@@ -18,7 +18,7 @@ function Presale() {
       id="presale"
       className="flex flex-col-reverse gap-10 lg:gap-0 lg:flex-row justify-between lg:px-[6rem] px-8"
     >
-      <div className="lg:w-1/2 space-y-10">
+      <div className="lg:w-1/2 space-y-10 lg:space-y-20 ">
         <div className="flex justify-between items-center">
           <div>
             <h3 className="text-2xl font-medium">ECHODEX</h3>
