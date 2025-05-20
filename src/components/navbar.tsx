@@ -25,7 +25,7 @@ function Navbar() {
       const balance = await client.getBalance({ address });
       const bnb = Number(balance) / 1e18;
       console.log("bnb: ", bnb);
-      dispatch(setBnbBal(String(bnb))); // shows like 1.2345
+      dispatch(setBnbBal(String(bnb)));
     }
 
     if (isConnected) fetchBalance();
