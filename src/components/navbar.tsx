@@ -1,13 +1,38 @@
-import { useSelector } from "react-redux";
-import type { RootState } from "../store";
+import { useDispatch, useSelector } from "react-redux";
+import type { AppDispatch, RootState } from "../store";
 import { useWallet } from "../utils/useWallet";
-import { useState } from "react";
+import { ConnectButton } from "@rainbow-me/rainbowkit";
+import { useAccount } from "wagmi";
+import { useEffect, useState } from "react";
+import { createPublicClient, http } from "viem";
+import { bsc } from "wagmi/chains";
+import { setBnbBal } from "../store/walletSlice";
 
 function Navbar() {
-  const { connect } = useWallet();
   const [showNav, setShowNav] = useState(false);
   const wallet = useSelector((state: RootState) => state.wallet);
-  console.log("signer: ", wallet.signer);
+  const dispatch = useDispatch<AppDispatch>();
+
+  const { address, isConnected } = useAccount();
+
+  useEffect(() => {
+    async function fetchBalance() {
+      if (!address) return;
+
+      const client = createPublicClient({
+        chain: bsc,
+        transport: http(),
+      });
+
+      const balance = await client.getBalance({ address });
+      const bnb = Number(balance) / 1e18;
+      console.log("bnb: ", bnb);
+      dispatch(setBnbBal(String(bnb))); // shows like 1.2345
+    }
+
+    if (isConnected) fetchBalance();
+  }, [address, isConnected]);
+
   return (
     <nav className="flex fixed z-40 text-white items-center w-full lg:w-max h-[4rem] px-6 lg:rounded-full top-0 lg:top-10 gap-16 bg-black border-b lg:border border-b-brand lg:border-brand -translate-x-[50%] left-[50%]">
       <div className="flex w-full h-full justify-between items-center lg:mb-0">
@@ -97,7 +122,8 @@ function Navbar() {
           <ul className="flex mt-8 lg:mt-0 flex-col lg:flex-row lg:items-center gap-6">
             <li className="cursor-pointer">Contact</li>
             <li className="cursor-pointer">
-              {!wallet.address ? (
+              <ConnectButton />
+              {/* {!wallet.address ? (
                 <button
                   onClick={connect}
                   className="py-2 cursor-pointer px-8 text-white bg-brand/55 border-2 font-medium border-white rounded-full"
@@ -111,7 +137,7 @@ function Navbar() {
                 >
                   {wallet.address.slice(0, 6)}...{wallet.address.slice(-4)}
                 </button>
-              )}
+              )} */}
             </li>
           </ul>
         </div>
@@ -122,12 +148,12 @@ function Navbar() {
         <li className="cursor-pointer">Token</li>
         <li className="cursor-pointer">Team</li>
         <li className="cursor-pointer">Roadmap</li>
+        <li className="cursor-pointer">Contact</li>
       </ul>
 
       <ul className="hidden mt-8 lg:mt-0 lg:flex lg:items-center gap-6">
-        <li className="cursor-pointer">Contact</li>
         <li className="cursor-pointer">
-          {!wallet.address ? (
+          {/* {!wallet.address ? (
             <button
               onClick={connect}
               className="py-2 cursor-pointer px-8 text-nowrap text-white bg-brand/55 border-2 font-medium border-white rounded-full"
@@ -141,7 +167,8 @@ function Navbar() {
             >
               {wallet.address.slice(0, 6)}...{wallet.address.slice(-4)}
             </button>
-          )}
+          )} */}
+          <ConnectButton />
         </li>
       </ul>
     </nav>

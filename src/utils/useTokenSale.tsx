@@ -1,23 +1,30 @@
 // hooks/useTokenSale.ts
-import { ethers } from "ethers";
+import { useWalletClient } from "wagmi";
+import { parseEther } from "viem";
 
-export function useTokenSale(
-  signer: ethers.Signer | null,
-  saleContractAddress: string
-) {
+export function useTokenSale(saleContractAddress: `0x${string}`) {
+  const { data: walletClient } = useWalletClient();
+
   async function buyEdex(bnbAmountInEth: string) {
-    if (!signer) {
+    if (!walletClient) {
       alert("Connect wallet first.");
       return;
     }
 
     try {
-      const tx = await signer.sendTransaction({
+      const txHash = await walletClient.sendTransaction({
+        account: walletClient.account,
         to: saleContractAddress,
-        value: ethers.parseEther(bnbAmountInEth),
+        value: parseEther(bnbAmountInEth),
       });
 
-      await tx.wait();
+      alert("Transaction sent! Waiting for confirmation...");
+
+      // You’ll need to use a public client to wait for confirmation
+      // If you have it in scope, e.g. from `usePublicClient`
+      // const publicClient = usePublicClient()
+      // await publicClient.waitForTransactionReceipt({ hash: txHash })
+
       alert("Purchase successful! You will receive your EDEX shortly.");
     } catch (err) {
       console.error(err);

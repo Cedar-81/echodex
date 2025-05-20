@@ -19,13 +19,13 @@ import Contact from "./components/contact";
 import Footer from "./components/footer";
 
 function App() {
-  const { connect } = useWallet();
-  const wallet = useSelector((state: RootState) => state.wallet);
-  useEffect(() => {
-    if (!wallet.address) {
-      connect();
-    }
-  }, []);
+  // const { connect } = useWallet();
+  // const wallet = useSelector((state: RootState) => state.wallet);
+  // useEffect(() => {
+  //   if (!wallet.address) {
+  //     connect();
+  //   }
+  // }, []);
   return (
     <main className="bg-black text-white space-y-[5rem]">
       <Navbar />
