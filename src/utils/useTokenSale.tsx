@@ -12,7 +12,7 @@ export function useTokenSale(saleContractAddress: `0x${string}`) {
     }
 
     try {
-      const txHash = await walletClient.sendTransaction({
+      await walletClient.sendTransaction({
         account: walletClient.account,
         to: saleContractAddress,
         value: parseEther(bnbAmountInEth),

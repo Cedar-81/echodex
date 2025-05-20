@@ -1,6 +1,5 @@
-import { useDispatch, useSelector } from "react-redux";
-import type { AppDispatch, RootState } from "../store";
-import { useWallet } from "../utils/useWallet";
+import { useDispatch } from "react-redux";
+import type { AppDispatch } from "../store";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { useAccount } from "wagmi";
 import { useEffect, useState } from "react";
@@ -10,7 +9,6 @@ import { setBnbBal } from "../store/walletSlice";
 
 function Navbar() {
   const [showNav, setShowNav] = useState(false);
-  const wallet = useSelector((state: RootState) => state.wallet);
   const dispatch = useDispatch<AppDispatch>();
 
   const { address, isConnected } = useAccount();

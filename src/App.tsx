@@ -1,11 +1,7 @@
-import { useEffect } from "react";
 import "./App.css";
 import Hero from "./components/hero";
 import Navbar from "./components/navbar";
 import Presale from "./components/presale";
-import type { RootState } from "./store";
-import { useSelector } from "react-redux";
-import { useWallet } from "./utils/useWallet";
 import About from "./components/about";
 import Why from "./components/why";
 import Community from "./components/community";
