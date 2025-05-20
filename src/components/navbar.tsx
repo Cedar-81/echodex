@@ -151,21 +151,6 @@ function Navbar() {
 
       <ul className="hidden mt-8 lg:mt-0 lg:flex lg:items-center gap-6">
         <li className="cursor-pointer w-max">
-          {/* {!wallet.address ? (
-            <button
-              onClick={connect}
-              className="py-2 cursor-pointer px-8 text-nowrap text-white bg-brand/55 border-2 font-medium border-white rounded-full"
-            >
-              Connect Wallet
-            </button>
-          ) : (
-            <button
-              onClick={connect}
-              className="py-2 cursor-pointer px-8 text-white bg-brand/55 border-2 font-medium border-white rounded-full"
-            >
-              {wallet.address.slice(0, 6)}...{wallet.address.slice(-4)}
-            </button>
-          )} */}
           <ConnectButton />
         </li>
       </ul>
