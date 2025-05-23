@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { TwitterTweetEmbed } from "react-twitter-embed";
+import { Tweet } from "react-tweet";
 
 function Promo() {
   const [isClient, setIsClient] = useState(false);
@@ -70,11 +70,11 @@ function Promo() {
 
       {isClient && (
         <div className="flex flex-col lg:flex-row gap-10 mx-auto w-max">
-          <div className="w-full lg:w-[30rem]">
-            <TwitterTweetEmbed tweetId="1899122583867462062" />
+          <div className="w-[80vw] mx-auto lg:w-[30rem]">
+            <Tweet id="1899122583867462062" />
           </div>
-          <div className="w-full lg:w-[30rem]">
-            <TwitterTweetEmbed tweetId="1892882631936635171" />
+          <div className="w-[80vw] mx-auto lg:w-[30rem]">
+            <Tweet id="1892882631936635171" />
           </div>
         </div>
       )}

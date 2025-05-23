@@ -23,6 +23,7 @@
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-redux": "^9.2.0",
+    "react-tweet": "^3.2.2",
     "react-twitter-embed": "^4.0.4",
     "viem": "2.x",
     "wagmi": "^2.15.4",
