@@ -2,11 +2,11 @@ import { ethers } from "ethers";
 import { useDispatch } from "react-redux";
 import type { AppDispatch } from "../store";
 import { setAddress, setBaseBal, setSigner } from "../store/walletSlice"; // you can rename setBnbBal if needed
-import { useState } from "react";
+// import { useState } from "react";
 
 export function useWallet() {
   const dispatch = useDispatch<AppDispatch>();
-  const [balance, setBalance] = useState<string>("");
+  // const [balance, setBalance] = useState<string>("");
 
   async function connect() {
     if (!window.ethereum) {
@@ -28,7 +28,7 @@ export function useWallet() {
     const rawBalance = await provider.getBalance(address); // returns BigInt
     const formattedBalance = ethers.formatEther(rawBalance); // convert to string in ETH (on Base)
 
-    setBalance(formattedBalance);
+    // setBalance(formattedBalance);
 
     dispatch(setSigner(signer));
     dispatch(setAddress(address));
