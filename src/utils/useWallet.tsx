@@ -1,14 +1,12 @@
 import { ethers } from "ethers";
 import { useDispatch } from "react-redux";
 import type { AppDispatch } from "../store";
-import { setAddress, setBnbBal, setSigner } from "../store/walletSlice";
+import { setAddress, setBaseBal, setSigner } from "../store/walletSlice"; // you can rename setBnbBal if needed
 import { useState } from "react";
 
 export function useWallet() {
   const dispatch = useDispatch<AppDispatch>();
   const [balance, setBalance] = useState<string>("");
-
-  console.log("balance: ", balance);
 
   async function connect() {
     if (!window.ethereum) {
@@ -21,15 +19,20 @@ export function useWallet() {
     const signer = await provider.getSigner();
     const address = await signer.getAddress();
 
-    // Get BNB balance
+    const network = await provider.getNetwork();
+    if (network.chainId !== 8453n) {
+      alert("Please switch to the Base Mainnet in MetaMask.");
+      return;
+    }
+
     const rawBalance = await provider.getBalance(address); // returns BigInt
-    const formattedBalance = ethers.formatEther(rawBalance); // convert to string in BNB
+    const formattedBalance = ethers.formatEther(rawBalance); // convert to string in ETH (on Base)
 
     setBalance(formattedBalance);
 
     dispatch(setSigner(signer));
     dispatch(setAddress(address));
-    dispatch(setBnbBal(balance));
+    dispatch(setBaseBal(formattedBalance)); // consider renaming to setEthBal if appropriate
   }
 
   return { connect };

@@ -1,6 +1,11 @@
+import { useEffect, useState } from "react";
 import { TwitterTweetEmbed } from "react-twitter-embed";
 
 function Promo() {
+  const [isClient, setIsClient] = useState(false);
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
   return (
     <section className="px-8 space-y-10 lg:space-y-20 lg:px-[6rem] lg:text-center">
       <div className="space-y-2 lg:space-y-3">
@@ -63,14 +68,16 @@ function Promo() {
         </p>
       </div>
 
-      <div className="flex flex-col lg:flex-row gap-10 mx-auto w-max">
-        <div className=" w-full lg:w-[30rem]">
-          <TwitterTweetEmbed tweetId="1899122583867462062" />
+      {isClient && (
+        <div className="flex flex-col lg:flex-row gap-10 mx-auto w-max">
+          <div className="w-full lg:w-[30rem]">
+            <TwitterTweetEmbed tweetId="1899122583867462062" />
+          </div>
+          <div className="w-full lg:w-[30rem]">
+            <TwitterTweetEmbed tweetId="1892882631936635171" />
+          </div>
         </div>
-        <div className=" w-full lg:w-[30rem]">
-          <TwitterTweetEmbed tweetId="1892882631936635171" />
-        </div>
-      </div>
+      )}
     </section>
   );
 }

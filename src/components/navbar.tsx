@@ -4,13 +4,12 @@ import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { useAccount } from "wagmi";
 import { useEffect, useState } from "react";
 import { createPublicClient, http } from "viem";
-import { bsc } from "wagmi/chains";
-import { setBnbBal } from "../store/walletSlice";
+import { base } from "wagmi/chains";
+import { setBaseBal } from "../store/walletSlice";
 
 function Navbar() {
   const [showNav, setShowNav] = useState(false);
   const dispatch = useDispatch<AppDispatch>();
-
   const { address, isConnected } = useAccount();
 
   useEffect(() => {
@@ -18,14 +17,15 @@ function Navbar() {
       if (!address) return;
 
       const client = createPublicClient({
-        chain: bsc,
+        chain: base,
         transport: http(),
       });
 
       const balance = await client.getBalance({ address });
-      const bnb = Number(balance) / 1e18;
-      console.log("bnb: ", bnb);
-      dispatch(setBnbBal(String(bnb)));
+      const baseBalance = Number(balance) / 1e18;
+      console.log("Base ETH Balance: ", baseBalance);
+
+      dispatch(setBaseBal(String(baseBalance)));
     }
 
     if (isConnected) fetchBalance();

@@ -24,11 +24,11 @@ export const walletSlice = createSlice({
     setAddress: (state, action: PayloadAction<string>) => {
       state.address = action.payload;
     },
-    setBnbBal: (state, action: PayloadAction<string>) => {
+    setBaseBal: (state, action: PayloadAction<string>) => {
       state.balance = action.payload;
     },
   },
 });
 
-export const { setAddress, setSigner, setBnbBal } = walletSlice.actions;
+export const { setAddress, setSigner, setBaseBal } = walletSlice.actions;
 export default walletSlice.reducer;

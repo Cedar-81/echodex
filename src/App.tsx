@@ -13,7 +13,7 @@ import Reward from "./components/reward";
 import Team from "./components/team";
 import Contact from "./components/contact";
 import Footer from "./components/footer";
-// import Promo from "./components/promo";
+import Promo from "./components/promo";
 
 function App() {
   return (
@@ -24,7 +24,7 @@ function App() {
       <About />
       <Why />
       <Community />
-      {/* <Promo /> */}
+      <Promo />
       <Tokenomics />
       <Roadmap />
       <Funds />
