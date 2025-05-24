@@ -9,7 +9,7 @@ function Promo() {
   return (
     <section className="px-8 space-y-10 lg:space-y-20 lg:px-[6rem] lg:text-center">
       <div className="space-y-2 lg:space-y-3">
-        <div className="flex gap-8 w-max mx-auto pb-6">
+        <div className="flex gap-8 w-max lg:mx-auto pb-6">
           <a target="_blank" href="https://t.me/ECHODEX_CHANNEL">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -69,7 +69,7 @@ function Promo() {
       </div>
 
       {isClient && (
-        <div className="flex flex-col lg:flex-row gap-10 mx-auto w-max">
+        <div className="flex flex-col text-left  lg:flex-row gap-10 mx-auto w-max">
           <div className="w-[80vw] mx-auto lg:w-[30rem]">
             <Tweet id="1899122583867462062" />
           </div>

@@ -33,7 +33,7 @@ function Presale() {
           </div>
 
           <div className="text-xs lg:text-base">
-            <h4 className="font-medium">EDEX/BNB</h4>
+            <h4 className="font-medium">EDEX/ETH</h4>
             <p>view on BSCSCAN</p>
           </div>
         </div>
@@ -55,9 +55,9 @@ function Presale() {
         </div>
 
         <div className="flex items-center text-xs lg:text-base justify-between">
-          <p>1 BNB = 1000 EDEX</p>
-          <p className="text-xs lg:text-sm">Hard Cap: 4000 BNB</p>
-          <p>Balance: {wallet.balance ? wallet.balance : "0"}BNB</p>
+          <p>1 ETH = 1000 EDEX</p>
+          <p className="text-xs lg:text-sm">Hard Cap: 4000 ETH</p>
+          <p>Balance: {wallet.balance ? wallet.balance : "0"}ETH</p>
         </div>
       </div>
 

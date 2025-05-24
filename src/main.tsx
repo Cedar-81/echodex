@@ -11,13 +11,13 @@ import {
   RainbowKitProvider,
 } from "@rainbow-me/rainbowkit";
 import { WagmiProvider } from "wagmi";
-import { mainnet, polygon, optimism, arbitrum, base } from "wagmi/chains";
+import { mainnet, polygon, optimism, arbitrum, base, bsc } from "wagmi/chains";
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 
 const config = getDefaultConfig({
   appName: "Echodex",
   projectId: "cdba2c09493f9fbf83715b43a036cb0a",
-  chains: [mainnet, polygon, optimism, arbitrum, base],
+  chains: [mainnet, polygon, optimism, arbitrum, base, bsc],
   ssr: false, // If your dApp uses server side rendering (SSR)
 });
 

@@ -4,7 +4,7 @@ import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { useAccount } from "wagmi";
 import { useEffect, useState } from "react";
 import { createPublicClient, http } from "viem";
-import { base } from "wagmi/chains";
+import { bsc } from "wagmi/chains";
 import { setBaseBal } from "../store/walletSlice";
 
 function Navbar() {
@@ -17,7 +17,7 @@ function Navbar() {
       if (!address) return;
 
       const client = createPublicClient({
-        chain: base,
+        chain: bsc,
         transport: http(),
       });
 
