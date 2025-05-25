@@ -2,6 +2,7 @@
 import { useWalletClient, useChainId } from "wagmi";
 import { Web3Provider } from "@ethersproject/providers";
 import { parseEther as ethersParseEther } from "ethers"; // v6 import
+import toast from 'react-hot-toast';
 
 export function useTokenSale(saleContractAddress: `0x${string}`) {
   const { data: walletClient } = useWalletClient();
@@ -9,13 +10,13 @@ export function useTokenSale(saleContractAddress: `0x${string}`) {
 
   async function buyEdex(bnbAmountInEth: string) {
     if (!walletClient) {
-      alert("Connect wallet first.");
+      toast.error("Connect wallet first.");
       return;
     }
 
     const BNB_CHAIN_ID = 56;
     if (chainId !== BNB_CHAIN_ID) {
-      alert("Please switch your wallet to the Binance Smart Chain network.");
+      toast.error("Please switch your wallet to the Binance Smart Chain network.");
       return;
     }
 
@@ -28,13 +29,16 @@ export function useTokenSale(saleContractAddress: `0x${string}`) {
         value: ethersParseEther(bnbAmountInEth),
       });
 
-      alert("Transaction sent! Waiting for confirmation...");
+      toast.loading("Transaction sent! Waiting for confirmation...", {
+        id: 'tx-loading'
+      });
+      
       await tx.wait();
-
-      alert("Purchase successful! You will receive your EDEX shortly.");
+      toast.dismiss('tx-loading');
+      toast.success("Purchase successful! You will receive your EDEX shortly.");
     } catch (err) {
       console.error(err);
-      alert("Transaction failed.");
+      toast.error("Transaction failed.");
     }
   }
 

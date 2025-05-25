@@ -14,10 +14,19 @@ import Team from "./components/team";
 import Contact from "./components/contact";
 import Footer from "./components/footer";
 import Promo from "./components/promo";
+import { Toaster } from 'react-hot-toast';
 
 function App() {
   return (
     <main className="bg-black text-white space-y-[5rem] lg:space-y-[15rem]">
+      <Toaster position="top-right" toastOptions={{
+        style: {
+          background: '#333',
+          color: '#fff',
+          border: "2px solid #F5B655",
+          borderRadius: "10px",
+        },
+      }} />
       <Navbar />
       <Hero />
       <Presale />

@@ -2,6 +2,7 @@ import { ethers } from "ethers";
 import { useDispatch } from "react-redux";
 import type { AppDispatch } from "../store";
 import { setAddress, setBaseBal, setSigner } from "../store/walletSlice"; // you can rename setBnbBal if needed
+import toast from 'react-hot-toast';
 // import { useState } from "react";
 
 export function useWallet() {
@@ -10,7 +11,7 @@ export function useWallet() {
 
   async function connect() {
     if (!window.ethereum) {
-      alert("Please install MetaMask!");
+      toast.error("Please install MetaMask!");
       return;
     }
 
@@ -21,7 +22,7 @@ export function useWallet() {
 
     const network = await provider.getNetwork();
     if (network.chainId !== 8453n) {
-      alert("Please switch to the Base Mainnet in MetaMask.");
+      toast.error("Please switch to the Base Mainnet in MetaMask.");
       return;
     }
 
