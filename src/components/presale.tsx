@@ -3,8 +3,8 @@ import { useTokenSale } from "../utils/useTokenSale";
 import { useSelector } from "react-redux";
 import type { RootState } from "../store";
 
-// const SALE_CONTRACT_ADDRESS = "0x62AD35EbBBC4BE1cC025Da4265D0731cA933B2CC";
-const SALE_CONTRACT_ADDRESS = "0x5233F7216082d286Fa9caa39d603CC45118AC25c";
+const SALE_CONTRACT_ADDRESS = "0x62AD35EbBBC4BE1cC025Da4265D0731cA933B2CC";
+// const SALE_CONTRACT_ADDRESS = "0x5233F7216082d286Fa9caa39d603CC45118AC25c";
 
 function Presale() {
   const wallet = useSelector((state: RootState) => state.wallet);
