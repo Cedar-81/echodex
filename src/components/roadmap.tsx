@@ -16,7 +16,7 @@ function Roadmap() {
 
               <p className="text-xs lg:text-base">Token creation and presale</p>
               <p className="text-xs lg:text-base">
-                Game prototype usiing SolidWorks
+                Game prototype using SolidWorks
               </p>
               <p className="text-xs lg:text-base">
                 Staking and liquidity pool depployment
