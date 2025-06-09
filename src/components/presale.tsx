@@ -12,16 +12,16 @@ function Presale() {
   const { buyEdex } = useTokenSale(SALE_CONTRACT_ADDRESS);
   const [amount, setAmount] = useState(0);
   const [isSubscribed, setIsSubscribed] = useState(false);
-  const [email, setEmail] = useState("");
+  const [walletAddress, setWalletAddress] = useState("");
 
   const handleAirdropSubscribe = () => {
-    if (!email) {
-      toast.error("Please enter your email address");
+    if (!walletAddress) {
+      toast.error("Please enter your wallet address");
       return;
     }
     setIsSubscribed(true);
     toast.success("You're subscribed for the airdrop! We'll notify you when it's live.");
-    setEmail("");
+    setWalletAddress("");
   };
 
   return (
@@ -103,14 +103,16 @@ function Presale() {
         <div className="relative z-10 space-y-6 lg:w-2/3">
           <h3 className="text-3xl lg:text-5xl font-medium text-brand">Airdrop Coming Soon!</h3>
           <p className="text-sm lg:text-base opacity-80">
-            Be among the first to receive our exclusive airdrop. Subscribe now and don't miss out on this opportunity to be part of our early community.
+            Be among the first to receive our exclusive airdrop. <br /><br />🚀 Join our exclusive airdrop Campaign.
+            <br /><br />💰 Earn up to $200 by referring friends and being part of our early community.
+            <br /><br />👉 Subscribe now, submit your wallet, and tag 3 friends under on our pinned tweet with your base wallet address! 
           </p>
           <div className="flex flex-col lg:flex-row gap-4">
             <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="Enter your email"
+              type="text"
+              value={walletAddress}
+              onChange={(e) => setWalletAddress(e.target.value)}
+              placeholder="Enter your wallet address"
               className="bg-black/20 border border-brand/20 rounded-lg px-4 py-3 lg:w-[400px] focus:outline-none focus:border-brand"
             />
             <button
